@@ -1,0 +1,9 @@
+.darkMode{
+    background-color: black;
+    color: white;
+    height: 100%;
+}
+.darkLight{
+    background-color: white;
+    color: black;
+}

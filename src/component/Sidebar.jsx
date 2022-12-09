@@ -31,30 +31,23 @@ export default function Sidebar({handleMode}) {
               <ListItemText primary="Group" />
             </ListItemButton>
           </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton component ='a' href='home'>
+          <ListItem disablePadding >
+                <ListItemButton component ='a' onClick={(e)=>{ e.preventDefault(); navigate("/home")}} >
               <ListItemIcon>
-                <GroupsIcon />
+                <AddHomeWorkIcon />
+              </ListItemIcon>
+              <ListItemText primary="HomePage" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component ='a' onClick={(e)=>{ e.preventDefault(); navigate("/group")}}>
+              <ListItemIcon>
+                <ArticleIcon />
               </ListItemIcon>
               <ListItemText primary="Group" />
             </ListItemButton>
           </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton component ='a' href='#home'>
-              <ListItemIcon>
-                <StorefrontIcon />
-              </ListItemIcon>
-              <ListItemText primary="Market" />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton component ='a' href='#home'>
-              <ListItemIcon>
-                <PeopleAltIcon />
-              </ListItemIcon>
-              <ListItemText primary="Friend" />
-            </ListItemButton>
-          </ListItem>
+         
           <ListItem disablePadding>
             <ListItemButton component ='a' href='#home'>
               <ListItemIcon>

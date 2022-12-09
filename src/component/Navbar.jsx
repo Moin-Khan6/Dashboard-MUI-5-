@@ -8,6 +8,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import Stack from '@mui/material/Stack';
 import Avatar from '@mui/material/Avatar';
 import Menu from '@mui/material/Menu';
+import { useNavigate } from 'react-router';
 
 export default function Navbar() {
 const StyledToolbar = styled(Toolbar)({
@@ -38,10 +39,11 @@ const UserBox = styled(Box)(({ theme })=>({
 
 
 const[open,setOpen] =useState(false)
+const navigate = useNavigate()
   return (
     <AppBar position='sticky' >
       <StyledToolbar>
-        <Typography variant='h6' sx={{display:{xs:"none",sm:"block"}}}>LAMA DEV </Typography>
+        <Typography variant='h6' sx={{display:{xs:"none",sm:"block",cursor:"pointer"}}} onClick={()=>{navigate('/')}}  >LAMA DEV </Typography>
         <Typography variant='h6' sx={{display:{xs:"block",sm:"none"}}}><PetsIcon/></Typography>
         <Search><InputBase placeholder='Search ....'/></Search>
         <Icons><Badge badgeContent={4} color="error">

@@ -6,7 +6,7 @@ import Post from './post';
 export default function Feed() {
   return (
     <Box p={2} >
-      {fetchData.map(item => <Post title ={item.title} image ={item.url}/> )}  
+      <Post data={fetchData} />
     </Box>
   )
 }

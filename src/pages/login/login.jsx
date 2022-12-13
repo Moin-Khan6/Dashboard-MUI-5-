@@ -1,16 +1,14 @@
 import { Button, Grid, TextField, Typography } from '@mui/material'
 import { Box, Stack, styled } from '@mui/system'
 import React from 'react'
-import TextFieldCustom from '../../component/input/input'
 import styles from './style.module.css'
-import DeleteIcon from '@mui/icons-material/Delete';
 import GoogleIcon from '@mui/icons-material/Google';
 import AppleIcon from '@mui/icons-material/Apple';
 import InputBase from '@mui/material/InputBase';
 import { Link, useNavigate } from 'react-router-dom'
 
-
 export default function Login() {
+  
   const navigate = useNavigate()
   const BlueButton = styled(Button)({
     background: "white",
@@ -66,7 +64,7 @@ export default function Login() {
                                           <Typography variant='caption1' fontWeight={'bold'}>Forget Password?</Typography>
                                       </Box>
                                       <Box width={"90%"}>
-                                              <Button variant='contained' sx={{width:"100%"}} onClick={()=>{navigate('/')}}  >Login</Button>
+                                              <Button variant='contained' sx={{width:"100%"}} onClick={()=>{navigate('/dashboard')}}  >Login</Button>
                                       </Box>
                                   </Stack>
                             </Box>

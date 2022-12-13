@@ -71,7 +71,7 @@ const navigate = useNavigate()
       >
         <MenuItem >Profile</MenuItem>
         <MenuItem >My account</MenuItem>
-        <MenuItem onClick={()=>{navigate('/login')}} >Logout</MenuItem>
+        <MenuItem onClick={()=>{navigate('/')}} >Logout</MenuItem>
       </Menu>
       </AppBar>
   )

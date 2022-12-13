@@ -32,10 +32,8 @@ const Search = styled(Box)(({theme})=>({
 
 const UserBox = styled(Box)(({ theme })=>({
     display:"flex",
-    // [theme.breakpoints.up('sm')]:{
-    //   display:"flex"
-    // }
 }))
+
 
 
 const[open,setOpen] =useState(false)
@@ -73,7 +71,7 @@ const navigate = useNavigate()
       >
         <MenuItem >Profile</MenuItem>
         <MenuItem >My account</MenuItem>
-        <MenuItem >Logout</MenuItem>
+        <MenuItem onClick={()=>{navigate('/login')}} >Logout</MenuItem>
       </Menu>
       </AppBar>
   )

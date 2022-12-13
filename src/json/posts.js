@@ -11,4 +11,5 @@ export const  fetchData =[
         title:"Fifa world Cup",
         url:"https://drop.ndtv.com/albums/SPORTS/fifa-world-cup-_638059781471342820/638059781471342820_640x480.jpeg"
     }
+  
 ]

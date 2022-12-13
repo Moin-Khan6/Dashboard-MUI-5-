@@ -1,0 +1,35 @@
+.dashWraper{
+    background-color: #6CA6C1;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.headerContent{
+    font-weight: lighter;
+    color: white;
+}
+.loginWrapper{
+    background-color: #E8EDED;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginBox{
+    width: 50%;
+    border-radius: 15px;
+    padding: 5px;
+
+}
+
+.registerWrapper{
+    border-radius: 15px;
+    background: white;
+    padding: 8px;
+    height: 30vh;
+    margin-top: 25px;
+ 
+
+}

@@ -45,7 +45,7 @@ export default function Login() {
 
   return (
     <Grid container  >
-    <Grid item  xs={0} lg={5} className={styles.dashWraper} sx={{display:{sm:"none",lg:"flex"}}}>
+    <Grid item  xs={0} lg={5} className={styles.dashWraper} sx={{display:{xs:"none",lg:"flex"}}}>
         <Box>
             <Typography variant='h2' fontWeight={'bold'} className={styles.headerContent} >Dash</Typography>
         </Box>

@@ -25,7 +25,7 @@ export default function Rightbar() {
       ];
   return (
     <Box flex={1}  sx={{display:{xs:"none",sm:"block"}}} >    
-        <Box>
+        <Box position={'fixed'}>
         <Box>
             <Typography component={'h6'} >Online Friend</Typography>
             <AvatarGroup max={4}>

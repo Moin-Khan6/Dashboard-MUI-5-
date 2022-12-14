@@ -1,11 +1,21 @@
 import { Button, Grid, TextField, Typography } from '@mui/material'
 import { Box, Stack, styled } from '@mui/system'
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './style.module.css'
 import GoogleIcon from '@mui/icons-material/Google';
 import AppleIcon from '@mui/icons-material/Apple';
 import InputBase from '@mui/material/InputBase';
 import { Link, useNavigate } from 'react-router-dom'
+import Card from '../../component/card/card';
+import Register from './steps/stepRegister/stepRegister';
+import StepLogin from './steps/stepLogin/stepLogin';
+import StepRegister from './steps/stepRegister/stepRegister';
+
+
+const steps = {
+  1:StepLogin,
+  2:StepRegister
+}
 
 export default function Login() {
   
@@ -26,14 +36,21 @@ export default function Login() {
     marginTop:"10px"
   })  
 
+  const [step, setStep] = useState(1)
+  let Step =  steps[step];
+
+  const onNext = ()=>{
+    setStep(step+1)
+  }
+
   return (
-    <Grid container spacing={2}>
-    <Grid item  xs={12} sm={5} className={styles.dashWraper} sx={{display:{xs:"none",sm:"flex"}}}>
+    <Grid container  >
+    <Grid item  xs={0} lg={5} className={styles.dashWraper} sx={{display:{sm:"none",lg:"flex"}}}>
         <Box>
             <Typography variant='h2' fontWeight={'bold'} className={styles.headerContent} >Dash</Typography>
         </Box>
     </Grid>
-    <Grid item xs={12} sm={7} className={styles.loginWrapper} >
+    <Grid item xs={12} lg={7} className={styles.loginWrapper} >
               <Box className={styles.loginBox} >
                     <Stack>
                           <Box >
@@ -50,35 +67,11 @@ export default function Login() {
                                   <BlueButton  startIcon={<AppleIcon />}>Sign in with Apple</BlueButton>
                               </Box>
                           </Stack>
-                            <Box className={styles.registerWrapper}  >
-                                  <Stack direction={'column'} justifyContent={'center'} alignItems={'center'} spacing={4} width={'100%'} height={"100%"} >
-                                      <Box width={"90%"}>
-                                          <Typography variant='caption1' fontWeight={'bold'}>Email Address</Typography>
-                                          <RegisterButtons> <InputBase placeholder='Email' /></RegisterButtons>
-                                      </Box>
-                                      <Box width={"90%"}>
-                                          <Typography variant='caption1'  fontWeight={'bold'}>Password</Typography>
-                                          <RegisterButtons> <InputBase placeholder='Password' type='password' sx={{height:"100%"}}/></RegisterButtons>
-                                      </Box>
-                                      <Box width={"90%"}>
-                                          <Typography variant='caption1' fontWeight={'bold'}>Forget Password?</Typography>
-                                      </Box>
-                                      <Box width={"90%"}>
-                                              <Button variant='contained' sx={{width:"100%"}} onClick={()=>{navigate('/dashboard')}}  >Login</Button>
-                                      </Box>
-                                  </Stack>
-                            </Box>
+                          <Step onNext={onNext}/>   
                     </Stack>
-                    <Box sx={{textAlign:"center",marginTop:"10px",display:"flex",alignItems:"center",justifyContent:"center"}}>
-                      <Typography variant='body2' fontWeight={'bold'}>Don't have Already Account ?</Typography>
-                      <Typography variant='body2' sx={{color:"blue",cursor:"pointer"}}>Register Here</Typography>
-                    </Box>
-              </Box>
-
-    </Grid>
-  </Grid>
-    //   <div>
-    //     <TextFieldCustom/>
-    // </div>
+               </Box>
+     </Grid>
+   </Grid>
+  
   )
 }

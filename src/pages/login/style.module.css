@@ -1,3 +1,7 @@
+.gridWrapper{
+    height: 100vh;
+}
+
 .dashWraper{
     background-color: #6CA6C1;
     height: 100vh;
@@ -11,6 +15,8 @@
 }
 .loginWrapper{
     background-color: #E8EDED;
+    /* background-color: red; */
+    height: 100vh;
     color: black;
     display: flex;
     justify-content: center;
@@ -19,9 +25,9 @@
 
 .loginBox{
     width: 50%;
+    height: 60%;
     border-radius: 15px;
     padding: 5px;
-
 }
 
 .registerWrapper{
@@ -30,6 +36,5 @@
     padding: 8px;
     height: 30vh;
     margin-top: 25px;
- 
-
+    height: 35vh;
 }

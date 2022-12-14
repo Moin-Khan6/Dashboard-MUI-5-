@@ -1,21 +1,17 @@
-import { Box, Stack } from '@mui/material'
+import { Box, Fab, Stack } from '@mui/material'
 import React, { useState } from 'react'
 import { Route, Router, Routes } from 'react-router'
+import Add from '../../component/add'
 import Feed from '../../component/Feed'
 import Navbar from '../../component/Navbar'
 import Rightbar from '../../component/Rightbar'
 import Sidebar from '../../component/Sidebar'
 import Group from '../group/group'
 import Home from '../home/home'
-import styles from './style.module.css'
 
-export default function Dashboard() {
-  const [mode, setMode]=useState(false)
-  const handleMode =()=>{
-    setMode(!mode)
-  }
+export default function Dashboard({handleMode}) {
   return (
-    <Box className={ mode ? styles.darkMode : styles.darkLight } >
+    <Box >
       <Navbar/>
       <Stack direction={"row"} spacing={2} justifyContent={"space-evenly"}>
       <Sidebar handleMode ={handleMode}   />
@@ -28,6 +24,6 @@ export default function Dashboard() {
       </Box> 
       <Rightbar/>
       </Stack>
-    </Box>
+      </Box>
   )
 }

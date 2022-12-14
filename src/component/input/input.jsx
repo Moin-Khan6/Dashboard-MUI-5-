@@ -1,12 +1,10 @@
 import { TextField } from '@mui/material'
 import React from 'react'
 
-export default function TextFieldCustom({label, handleChange,value}) {
+export default function TextFieldCustom({label, onChange,value }) {
   return (
-<TextField
-  id="outlined-name"
-  label={label}
-  value={value}
-  onChange={handleChange}
-/>  )
+    <>
+      <TextField label={label} value={value} onChange={onChange}/> 
+    </>
+  )
 }
